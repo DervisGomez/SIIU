@@ -1,0 +1,76 @@
+// Place all the styles related to the iniciarSesion controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#contenido-sesion{
+	display: flex;
+	position: relative;
+	height: 85vh;
+	top:90px;
+}
+#sesion{
+	width: 90%;
+	max-width: 400px;
+	background: rgb(255,255,255);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 1.5em 0;
+	box-shadow: 0px 0px 10px rgb(0,0,0);
+}
+#imagen-sesion{
+	width: 100px;
+	margin-top: 1em;
+}
+#text-sesion{
+	margin: 1em auto;
+}
+#for-sesion{
+	margin: 1em auto;
+}
+#contenido-mensaje{
+	width: 80%;
+	margin: 0 auto;
+}
+#mensaje-sesion{
+	color: red;
+	font-size: 0.85em;
+	text-align: left;
+}
+#dato-sesion, #boton-sesion, #botonC-sesion,#clave-sesion{
+	display: block;
+	width: 80%;
+	height: 40px;
+	margin: 0.75em auto;
+	font-size: 1.1em;
+	color: black;
+}
+#dato-sesion{
+	border-radius: 0.5em 0 0 0;
+}
+#boton-sesion, #botonC-sesion{
+	background: rgb(10,30,100);
+	border: 0;
+	cursor: pointer;
+	color: white;
+	border-radius: 0 0 0.5em 0;
+}
+#botonC-sesion{
+	border-radius: 0.5em 0 0 0;
+}
+#boton-sesion:hover{
+	background: rgba(10,30,100,0.9);
+}
+#visible{
+	display: none;
+}
+a,a:visited{
+	text-decoration: none; 
+	text-align: right;
+}
+#contenido-cancelar{
+	width: 80%;
+	margin: 0 auto;
+	text-align: right;
+	margin-bottom: 1em;
+}

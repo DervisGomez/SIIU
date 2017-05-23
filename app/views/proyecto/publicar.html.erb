@@ -1,0 +1,35 @@
+<section id="contenido-sesio">
+	<div id="sesio">
+		<%= form_tag({:id=>"for-sesion", :controller => "iniciar_sesion", :action => "introducirClave"}, :method => "get") do %>
+			<h1 id="text-sesion">Publicar Proyecto</h1>
+			<%= select_tag(:city_id,  options_for_select(
+				  [	
+				  	['Tipo de publicación', 0],
+				    ['Impreso', 1, { 'data-size' => '2.8 million' }],
+				    ['Web', 2, { 'data-size' => '3.2 million' }]
+				  ], 0
+				)) %>
+
+			<%= text_field_tag "textTitulo", "",  :placeholder => "Titulo del proyecto", :required => "required", :id => "dato-sesion", :type => "text"%>
+			<%= text_field_tag "textNombre", "",  :placeholder => "Nombre de la revista/Libro", :required => "required", :id => "dato-sesion", :type => "text"%>
+			<%= text_field_tag "textFechaE", "",  :placeholder => "Fecha de Entrega", :required => "required", :id => "dato-sesion", :type => "date"%>
+			<%= text_field_tag "textFechaP", "",  :placeholder => "Fecha de la publicación", :required => "required", :id => "dato-sesion", :type => "date"%>
+
+			 <div id="proyect">
+			 	<%= text_field_tag "textVolumen", "",  :placeholder => "Volumen", :required => "required", :id => "dato-sesi", :type => "number"%>
+			 	<%= text_field_tag "textPaginas", "",  :placeholder => "Numero de Paginas", :required => "required", :id => "dato-sesi", :type => "number"%>
+			 </div>
+			
+			<%= text_field_tag "textEdicion", "",  :placeholder => "Edición", :required => "required", :id => "dato-sesion", :type => "text"%>
+			<%= text_field_tag "textEditorial", "",  :placeholder => "Editorial", :required => "required", :id => "dato-sesion", :type => "text"%>
+			<%= text_field_tag "textCapitulos", "",  :placeholder => "Capitulos", :required => "required", :id => "dato-sesion", :type => "number"%>
+				
+			<%= submit_tag "Publicar", :id => "boton-sesion" %>
+			
+		<%end%>
+
+		<%= form_tag({:id=>"for-sesion", :controller => "iniciar_sesion", :action => "introducirClave"}, :method => "get") do %>		
+			<%= submit_tag "Cancelar", :id => "boton-sesion" %>
+		<%end%>
+	</div>
+</sectionula.html.erb</p>

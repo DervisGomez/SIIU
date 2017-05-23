@@ -1,0 +1,21 @@
+<section id="contenido-sesion">
+	<div id="sesion">
+
+		<%= form_tag({:id=>"for-sesion", :controller => "iniciar_sesion", :action => "introducirCodigo"}, :method => "get") do %>
+			<h1 id="text-sesion">Entrar al Sistema</h1>
+			<div id="contenido-mensaje">
+				<div id="mensaje-sesion"><%= $mensaje %></div>
+			</div>
+			
+			<%= submit_tag "Enviar Correo", :id => "botonC-sesion" %>
+
+			
+		<%end%>
+
+		<%= form_tag({:id=>"for-sesion", :controller => "iniciar_sesion", :action => "introducirCorreo"}, :method => "get") do %>
+
+			<%= submit_tag "Cambiar Correo", :id => "boton-sesion" %>
+					
+		<%end%>
+	</div>
+</sectionula.html.erb</p>

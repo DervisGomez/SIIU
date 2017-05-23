@@ -1,0 +1,40 @@
+<section id="contenido-sesio">
+	<div id="sesio">
+		<%= form_tag({:id=>"for-sesion", :controller => "sistema", :action => "inicio"}, :method => "get") do %>
+			<h1 id="text-sesion">Inscribir Proyecto</h1>
+			
+			<%= text_field_tag "textTitulo", "",  :placeholder => "Titulo del proyecto", :required => "required", :id => "dato-sesion", :type => "text"%>
+
+			 <div id="proyecto">
+			 <%= label_tag(:q, "Proyecto:") %>
+				<input id="subir-archivo" name="ha" type="file" /></div>
+				<%= text_area_tag "comment", "",:placeholder => "Resumen del proyecto", :required => "required", :rows => 10, :cols => 50, :id =>"text-area" %>
+
+				<%= select_tag(:city_id,  options_for_select(
+				  [	
+				  	['Area de investigacion', 0],
+				    ['Lisbon', 1, { 'data-size' => '2.8 million' }],
+				    ['Madrid', 2, { 'data-size' => '3.2 million' }]
+				  ], 0
+				)) %>
+				<%= select_tag(:city_id,  options_for_select(
+				  [	
+				  	['Tipo de Investigacíon', 0],
+				    ['A', 1],
+				    ['B', 2],
+				    ['C', 3],
+				    ['D', 4],
+				    ['E', 5]
+				  ], 0
+				)) %>
+
+				
+			<%= submit_tag "Inscribir", :id => "boton-sesion" %>
+			
+		<%end%>
+
+		<%= form_tag({:id=>"for-sesion", :controller => "iniciar_sesion", :action => "introducirClave"}, :method => "get") do %>		
+			<%= submit_tag "Cancelar", :id => "boton-sesion" %>
+		<%end%>
+	</div>
+</sectionula.html.erb</p>

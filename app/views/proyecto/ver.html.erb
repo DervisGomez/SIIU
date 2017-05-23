@@ -1,0 +1,110 @@
+<section id="contenido-sesio">
+	<div id="sesi">
+		<div id="info-mostrarr">
+			<h1>Proyecto de Investigacion 
+			<%= form_tag({:id=>"for-sesion", :controller => "proyecto", :action => "modificar"}, :method => "get") do %>
+				
+				<%= submit_tag "Modificar", :id => "boton-enviarM" %>
+			<%end%> </h1>
+		</div>
+		<div id="info-mostrar">
+			<h4>Usuario:</h4>
+			<h3>Dervis D. Gomez L.</h3>
+		</div>
+		<div id="info-mostrarr">
+			<h4>Titulo Proyecto:</h4>
+			<h3>Tranformacion oportuna de los procesos</h3>
+		</div>
+		<div id="info-mostrar">
+			<h4>Resumen Proyecto:</h4>
+			<h3>En la actualidad los cambios en nuentro entorno ocurren cada vez mas rapido, manternernos y para mantenernos a la vanguardia es necesario actualizarce, cada cuanto tiempo deben ocurrir actualizaciones, sobre esto trata esta investigacion</h3>
+		</div>
+		<div id="info-mostrarr">
+			<h4>Area Investigacion:</h4>
+			<h3>amsdfkmasdfma m kasf m asmkalsa almkmsd</h3>
+		</div>
+		<div id="info-mostrar">
+			<h4>Tipo Investigacion:</h4>
+			<h3>A</h3>
+		</div>
+		<div id="info-mostrarr">
+			<h4>Proyecto Completo:</h4>
+			<h3><%= link_to "Descargar proyecto", :controller => "proyecto", :action => "ver", :id => "descargar-proyecto"%></h3>
+		</div>
+		<div id="info-mostrar">
+			<h4>Estado:</h4>
+			<h3>Asignacion</h3>
+		</div>
+		<div id="info-mostrarr">
+			<h4>Aceptar Contrato:</h4>
+			<h3>
+				<%= form_tag({:id=>"for-sesion", :controller => "proyecto", :action => "ver"}, :method => "get") do %>
+				<input type="radio" value="0" name="habilitarDeshabilitar" onchange="aceptar(this.value);"> Si
+				<%= submit_tag "Aceptar", :id => "boton-enviarAc" %>
+			<%end%>
+			</h3>
+		</div>
+		<div id="info-mostrar">
+			<h4>Rechazar asignacion:</h4>
+			<h3>
+				<%= form_tag({:id=>"for-sesion", :controller => "sistema", :action => "inicio"}, :method => "get") do %>
+				<input type="radio" value="0" name="habilitarDeshabilitar" onchange="seleccionarButon2(this.value);"> Si
+				<%= submit_tag "Enviar", :id => "boton-enviarA" %>
+				<%= text_area_tag "comment", "",:placeholder => "Razones", :required => "required" , :rows => 7, :cols => 50, :id =>"text-areA" %>
+			<%end%>
+			</h3>
+		</div>
+		<div id="info-mostrarr">
+			<h4>Evaluadores:</h4>
+			<h3>Tomas Suarez - Jose Sanchez - Pedro Duran 
+				<%= form_tag({:id=>"for-sesion", :controller => "proyecto", :action => "asignar"}, :method => "get") do %>
+					<%= submit_tag "Asignar", :id => "boton-enviar" %>
+				<%end%>
+			</h3>
+		</div>
+		<div id="info-mostrar">
+			<h4>Evaluar:</h4>
+			<h3>
+				<%= form_tag({:id=>"for-sesion", :controller => "proyecto", :action => "ver"}, :method => "get") do %>
+					<%= select_tag(:evaluar,  options_for_select(
+					  [	
+					  	['Avalado', 0],
+					    ['No Avalado', 1],
+					    ['Avalado Definitivo', 2],
+					    ['No Avalado Definitivo', 3]
+					  ], 0
+					), :onChange => "HabilitarC()") %>
+					<%= submit_tag "Enviar", :id => "boton-enviar" %>
+					<%= text_area_tag "comment", "",:placeholder => "Recomendaciones", :rows => 7, :cols => 50, :id =>"text-are" %>
+				<%end%>
+				
+			</h3>
+		</div>
+		<div id="info-mostrarr">
+			<h4>Recomendaciones:</h4>
+			<h3>
+			bla bla bla bla bla aj alks jas aj lkajdkasdf;lkakjdflajf  kajsdf klajfasf akj kasjdf kjasdf jaskfj askfj ajf askjfasfjwoeijr owsmklmoeajoewj kld aksdjf ;asjf oweijfasldkfj asljfoewj aksjdfa ljwoeij faslkfj wejf aksdmnoi <br>
+			<%= form_tag({:id=>"for-sesion", :controller => "proyecto", :action => "ver"}, :method => "get") do %>
+				<%= label_tag(:recomen, "Aceptar Recomendaciones") %>
+				<input type="radio" value="1" name="habilitarDeshabilitar" onchange="seleccionarButon(this.value);"> Si
+				<input type="radio" value="2" name="habilitarDeshabilitar" onchange="seleccionarButon(this.value);"> No
+				<%= submit_tag "Enviar", :id => "boton-enviar" %>
+				<%= text_area_tag "comment", "",:placeholder => "Razones", :rows => 7, :cols => 50, :id =>"text-areR" %>
+			<%end%>
+			</h3>
+		</div>
+		<div id="info-mostrar">
+			<h4>Evaluaciones: </h4>
+			<h3>Avalado - Avalado - No Avalado </h3>
+		</div>
+		<div id="info-mostrarr">
+			<h4>Evaluacion Consejo: </h4>
+			<h3><%= form_tag({:id=>"for-sesion", :controller => "proyecto", :action => "ver"}, :method => "get") do %>
+				<input type="radio" value="4" name="habilitarDeshabilitar" onchange="seleccionarButon(this.value);"> Si
+				<input type="radio" value="3" name="habilitarDeshabilitar" onchange="seleccionarButon(this.value);"> No
+				<%= submit_tag "Enviar", :id => "boton-enviar" %>
+			<%end%></h3>
+		</div>
+		
+	</div>
+</sectionula.html.erb</p>

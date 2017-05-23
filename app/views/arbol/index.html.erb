@@ -1,0 +1,41 @@
+<!-- 
+  Autor  : Edgar Gonzalez
+  Web    : http://egonzale.org
+  Email  : egonzale@ucla.edu.ve
+  Rails  : version 4.2.6
+  Fecha  : 20 de mayo del 2016
+-->
+
+
+
+<head>
+ 
+  <script type="text/javascript" src="/js/ext/build/ext-all.js">
+
+  <!-- Modern-Sencha Touch - Html5 Universal para Browsers Desktop y Mobile  -->
+  <!-- Guia: http://docs.sencha.com/extjs/6.0/whats_new/6.0.0/modern_upgrade_guide.html -->
+  <!-- Ver Apis: http://docs.sencha.com/extjs/6.0/6.0.0-modern/-->
+  <!-- script type="text/javascript" src="js/ext/build/ext-modern-all.js"  -->
+  
+  <!-- Tema Trinton - Sencha - Desktop -->
+  <script type="text/javascript" src="js/ext/build/classic/theme-triton/theme-triton.js"></script>
+  <link rel="stylesheet" type="text/css" href="js/ext/build/classic/theme-triton/resources/theme-triton-all.css">
+
+  <script> 
+     //Escoger el idioma para los mensajes emergentes
+     var s = document.createElement("script");
+     s.type = 'text/javascript';
+     s.src = "js/ext/classic/locale/overrides/es/ext-locale-es.js";
+     s.charset = 'ascii';
+     document.getElementsByTagName("head")[0].appendChild(s);
+  </script>
+</head>
+
+<!-- Incluya los javascripts propios -->
+<script type="text/javascript" src="js/arbol/arbol.js"></script>
+<!-- Incluya hojas de estilos propios -->
+<link rel="stylesheet" type="text/css" href="css/micss.css">
+
+ <h1>Gerarquia del Arbol</h1>
+ <div id="myDiv">ARBOL</div>
+ <div id="tree_el"></div>

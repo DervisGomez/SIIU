@@ -1,0 +1,188 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#contenido-sesion{
+	display: flex;
+	position: relative;
+	height: 80vh;
+}
+#sesion{
+	width: 90%;
+	max-width: 400px;
+	background: rgb(255,255,255);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 1.5em 0;
+	box-shadow: 0px 0px 10px rgb(0,0,0);
+}
+#imagen-sesion{
+	width: 100px;
+	margin-top: 1em;
+}
+#imagen-sesio{
+	width: 100%;
+	margin-top: 1em;
+}
+#text-sesion{
+	margin: 1em auto;
+}
+#for-sesion{
+	margin: 1em auto;
+}
+#contenido-mensaje{
+	width: 80%;
+	margin: 0 auto;
+}
+#mensaje-sesion{
+	color: red;
+	font-size: 0.85em;
+	text-align: left;
+}
+#dato-sesion, #boton-sesion, #botonC-sesion,#clave-sesion{
+	display: block;
+	width: 80%;
+	height: 40px;
+	margin: 0.75em auto;
+	font-size: 1.1em;
+	color: black;
+}
+#dato-sesion{
+	border-radius: 0.5em 0 0 0;
+}
+#boton-sesion, #botonC-sesion{
+	background: rgb(10,30,100);
+	border: 0;
+	cursor: pointer;
+	color: white;
+	border-radius: 0 0 0.5em 0;
+}
+#botonC-sesion{
+	border-radius: 0.5em 0 0 0;
+}
+#boton-sesion:hover{
+	background: rgba(10,30,100,0.9);
+}
+#visible{
+	display: none;
+}
+a,a:visited{
+	text-decoration: none; 
+	text-align: right;
+}
+#contenido-cancelar{
+	width: 80%;
+	margin: 0 auto;
+	text-align: right;
+	margin-bottom: 1em;
+}
+
+
+
+
+
+
+#c-slider{
+	margin: auto;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#slider {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -0-flex;
+	display: flex;
+    width: 500%;
+}
+#slider section{
+	width: 100%;
+	position: relative;
+}
+#slider img{
+	width:100%;
+	display: block;
+}
+#btn-prev,#btn-next{
+	width: 60px;
+	height: 60px;
+	background: rgba(0,0,0,0.6);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	line-height: 57px;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 50%;
+	font-family:  monospace;
+	cursor:pointer;
+	color: rgb(255,255,255);
+}
+
+#btn-prev:hover,#btn-next:hover{
+	background: rgba(0,0,0,0.8);
+}
+#btn-prev{
+	left:4px;
+}
+#btn-next{
+	right:4px
+}
+#btn-boton{
+	display: flex;
+	position: absolute;
+	bottom: 4px;
+	left: 50%;
+	transform: translateX(-50%)
+}
+#btn-boton div{
+	width: 16px;
+	heidht: 16px;
+	border-radius: 50%;
+	background: rgba(255,255,255,0.6);
+	color: rgba(255,255,255,0);
+	margin: 0 3px;
+	cursor: pointer;
+	box-shadow: 0px 0px 1px rgb(0,0,0);
+}
+#btn-boton div:hover{
+	background: rgba(255,255,255,0.9);	
+}
+.info{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	aling: center;
+	width: 100%;
+}
+.expandir{
+	width: 100%;
+	background: rgba(255,255,255,0.8);
+}
+.texto{
+	width: 80%;
+	margin: 0 auto;
+	font-size: 3em;
+	text-shadow: 0px 0px 3px rgb(255,255,255);
+	color: rgb(10,15,95);
+	font-weight: bold;
+	line-height: 50px;
+}
+.boton{
+	width: 130px;
+	font-size: 1.75em;
+	background: rgba(0,0,0,0.4);
+	border: 2px solid rgb(255,255,255);
+	margin: 0 auto;
+	color: rgb(255,255,255);
+	box-shadow: 0px 0px 6px rgb(0,0,0);
+	cursor: pointer;
+	margin-top: 30px;
+}
+.boton:hover{
+	background: rgba(0,0,0,0.6);
+}

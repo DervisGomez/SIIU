@@ -1,0 +1,110 @@
+<section id="contenido-sistema">
+
+
+	
+	<%= form_tag({:id => "for-sesio", :controller => "iniciar_sesion", :action => "introducirClave"}, :method => "get") do %>
+<div id="contenido-filtro"><div>
+		<%= select_tag(:filtro,  options_for_select(
+				  [	
+				  	['Departamento', 0],
+				    ['Cedula', 1],
+				    ['Cantidad', 2],
+				    ['Area', 3],
+				    ['Tipo', 4],
+				    ['Rol', 5]
+				  ], 0
+				), :onChange => "HabilitarE()") %>
+			<%= select_tag(:departamento,  options_for_select(
+					  [	
+					  	['Informatica', 0],
+					    ['Matematica', 1],
+					    ['Fisica', 2],
+					    ['Producción', 3]
+					  ], 0
+					)) %>
+
+			<%= text_field_tag "textCedula", "",  :placeholder => "Cedula", :required => "required", :id => "cedula", :type => "text"%>
+			<%= text_field_tag "textDesde", "",  :placeholder => "Desde", :required => "required", :id => "desde", :type => "number"%>
+			<%= text_field_tag "textHasta", "",  :placeholder => "Hasta", :required => "required", :id => "hasta", :type => "number"%>
+			<%= select_tag(:area,  options_for_select(
+				  [	
+				
+				    ['Lisbon', 1, { 'data-size' => '2.8 million' }],
+				    ['Madrid', 2, { 'data-size' => '3.2 million' }]
+				  ], 0
+				)) %>
+				<%= select_tag(:tipo,  options_for_select(
+				  [	
+				    ['A', 1],
+				    ['B', 2],
+				    ['C', 3],
+				    ['D', 4],
+				    ['E', 5]
+				  ], 0
+				)) %>
+				<%= select_tag(:rol,  options_for_select(
+				  [	
+				    ['Investigador', 1],
+				    ['Evaluador', 2]
+				  ], 0
+				)) %>
+
+		<%= submit_tag "Ir", :id => "boton-inicio" %></div>
+</div>
+	<%end%>
+
+	
+
+<div id="contenido-proyecto">
+	<div id="estado-proyecto">
+		<div id=contenido-proceso>
+			<div>Cantidad de Proyectos:</div>
+		</div>
+		<h3 id="estado-text">E:5 - I:1</h3>
+	</div>
+	<div id="informacion-proyecto">
+		<h2 id="titulo-proyecto">Nombre del Usuario</h2>
+		<div id="rol-usuario">Departamento</div>
+		<div id="ver-proyecto">
+			<%= link_to "Ver Perfil", :controller => "sistema", :action => "perfil", :id => "ver-proyecto"%>
+			<%= link_to "Ver Proyectos", :controller => "sistema", :action => "inicio", :id => "ver-proyecto"%>
+			<%= link_to "Asignar", :controller => "welcome", :action => "index", :id => "ver-proyecto"%>
+		</div>
+	</div>
+</div>
+<div id="contenido-proyecto">
+	<div id="estado-proyecto">
+		<div id=contenido-proceso>
+			<div>Cantidad de Proyectos:</div>
+		</div>
+		<h3 id="estado-text">E:0 - I:1</h3>
+	</div>
+	<div id="informacion-proyecto">
+		<h2 id="titulo-proyecto">Nombre del Usuario</h2>
+		<div id="rol-usuario">Departamento</div>
+		<div id="ver-proyecto">
+			<%= link_to "Ver Perfil", :controller => "sistema", :action => "perfil", :id => "ver-proyecto"%> 
+			<%= link_to "Ver Proyectos", :controller => "sistema", :action => "inicio", :id => "ver-proyecto"%>
+		</div>
+
+	</div>
+</div>
+<div id="contenido-proyecto">
+	<div id="estado-proyecto">
+		<div id=contenido-proceso>
+			<div>Cantidad de Proyectos:</div>
+		</div>
+		<h3 id="estado-text">E:2 - I:0</h3>
+	</div>
+	<div id="informacion-proyecto">
+		<h2 id="titulo-proyecto">Nombre del Usuario</h2>
+		<div id="rol-usuario">Departamento</div>
+		<div id="ver-proyecto">
+			<%= link_to "Ver Perfil", :controller => "sistema", :action => "perfil", :id => "ver-proyecto"%>
+			<%= link_to "Ver Proyectos", :controller => "sistema", :action => "inicio", :id => "ver-proyecto"%>
+
+			<%= link_to "Asignar", :controller => "welcome", :action => "index", :id => "ver-proyecto"%>
+		</div>
+	</div>
+</div>
+</section>

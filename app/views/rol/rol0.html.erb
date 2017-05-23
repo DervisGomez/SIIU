@@ -1,0 +1,18 @@
+   <section id="contenido-sesion">
+ <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="bootstrap/css/half-slider.css" rel="stylesheet">
+
+	<div id="sesion">
+		<%= form_tag({:id=>"for-sesion", :controller => "rol", :action =>"rol0"}, :method => "get") do %>
+			<h1 id="text-sesion">Registrar Rol</h1>
+	
+			
+			<%= text_field_tag "textNombre", "",  :placeholder => "Nombre del Rol", :required => "required", :id => "dato-sesion", :type => "text"%>
+			
+			<div style="padding:20px;"><%= submit_tag "Siguiente", :class=>"btn btn-primary" %>
+		<%= submit_tag "Cancelar", :class=>"btn btn-danger" %></div>
+		<%end%>
+	</div>
+</sectionula.html.erb</p>
